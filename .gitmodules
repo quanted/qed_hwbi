@@ -1,0 +1,4 @@
+[submodule "templates_qed"]
+	path = templates_qed
+	url = https://github.com/quanted/templates_qed.git
+	branch = master
