@@ -2,3 +2,7 @@
 	path = templates_qed
 	url = https://github.com/quanted/templates_qed.git
 	branch = master
+[submodule "static_qed"]
+	path = static_qed
+	url = https://github.com/quanted/static_qed.git
+	branch = master
