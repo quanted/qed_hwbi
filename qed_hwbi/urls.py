@@ -9,6 +9,13 @@ import django.contrib.auth.views
 #import app.forms
 #import app.views
 import hwbi_app.views
+import hwbi_app.views.algorithms
+import hwbi_app.views.description
+import hwbi_app.views.input
+import hwbi_app.views.links_left
+import hwbi_app.views.map
+import hwbi_app.views.references
+
 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
