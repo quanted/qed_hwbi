@@ -4,6 +4,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>qed_hwbi</Name>
     <RootNamespace>qed_hwbi</RootNamespace>
+    <DjangoSettingsModule>settings</DjangoSettingsModule>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -28,24 +29,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="hwbi_app\admin.py" />
+    <Compile Include="hwbi_app\algorithms.py" />
     <Compile Include="hwbi_app\apps.py" />
+    <Compile Include="hwbi_app\description.py" />
+    <Compile Include="hwbi_app\input.py" />
+    <Compile Include="hwbi_app\links_left.py" />
+    <Compile Include="hwbi_app\map.py" />
     <Compile Include="hwbi_app\migrations\__init__.py" />
     <Compile Include="hwbi_app\models.py" />
+    <Compile Include="hwbi_app\references.py" />
     <Compile Include="hwbi_app\tests.py" />
     <Compile Include="hwbi_app\views.py" />
-    <Compile Include="hwbi_app\views\algorithms.py" />
-    <Compile Include="hwbi_app\views\description.py" />
-    <Compile Include="hwbi_app\views\input.py" />
-    <Compile Include="hwbi_app\views\links_left.py" />
-    <Compile Include="hwbi_app\views\map.py" />
-    <Compile Include="hwbi_app\views\references.py" />
-    <Compile Include="hwbi_app\views\__init__.py" />
     <Compile Include="hwbi_app\__init__.py" />
     <Compile Include="manage.py" />
-    <Compile Include="qed_hwbi\__init__.py" />
-    <Compile Include="qed_hwbi\settings.py" />
-    <Compile Include="qed_hwbi\urls.py" />
-    <Compile Include="qed_hwbi\wsgi.py" />
+    <Compile Include="__init__.py" />
+    <Compile Include="settings.py" />
+    <Compile Include="urls.py" />
+    <Compile Include="wsgi.py" />
     <Compile Include="static_qed\csvs\tryss.py" />
     <Compile Include="static_qed\cts\stylesheets\efs\marvin4js\docs\pythonExamples\import_demo.py" />
     <Compile Include="static_qed\cts\stylesheets\efs\marvin4js\docs\pythonExamples\molconverter.py" />
@@ -57,7 +57,6 @@
     <Folder Include="hwbi_app\" />
     <Folder Include="hwbi_app\migrations\" />
     <Folder Include="hwbi_app\templates\" />
-    <Folder Include="hwbi_app\views\" />
     <Folder Include="qed_hwbi\" />
     <Folder Include="static_qed\" />
     <Folder Include="static_qed\css\" />
