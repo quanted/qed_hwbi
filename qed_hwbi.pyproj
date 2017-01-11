@@ -32,6 +32,9 @@
     <Compile Include="hwbi_app\algorithms.py" />
     <Compile Include="hwbi_app\apps.py" />
     <Compile Include="hwbi_app\description.py" />
+    <Compile Include="hwbi_app\hwbi_input.py" />
+    <Compile Include="hwbi_app\hwbi_map.py" />
+    <Compile Include="hwbi_app\hwbi_tooltips.py" />
     <Compile Include="hwbi_app\input.py" />
     <Compile Include="hwbi_app\links_left.py" />
     <Compile Include="hwbi_app\map.py" />
@@ -56,7 +59,6 @@
   <ItemGroup>
     <Folder Include="hwbi_app\" />
     <Folder Include="hwbi_app\migrations\" />
-    <Folder Include="hwbi_app\templates\" />
     <Folder Include="qed_hwbi\" />
     <Folder Include="static_qed\" />
     <Folder Include="static_qed\css\" />
@@ -480,7 +482,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="hwbi_app\templates\index.html" />
     <Content Include="requirements.txt" />
     <Content Include="static_qed\.gitignore" />
     <Content Include="static_qed\css\boxsizing.htc" />
@@ -3482,8 +3483,11 @@
     <Content Include="static_qed\stylesheets\webice\scripts\tneCalc.js" />
     <Content Include="templates_qed\hwbi\02uberintroblock_wmodellinks_hwbi.html" />
     <Content Include="templates_qed\hwbi\03ubertext_links_left_drupal.html" />
+    <Content Include="templates_qed\hwbi\hwbi_algorithm.html" />
     <Content Include="templates_qed\hwbi\hwbi_input_page.html" />
     <Content Include="templates_qed\hwbi\hwbi_map_page.html" />
+    <Content Include="templates_qed\hwbi\hwbi_references.html" />
+    <Content Include="templates_qed\hwbi\hwbi_text.html" />
     <Content Include="templates_qed\hwbi\index.html" />
     <Content Include="templates_qed\hwbi\index_tab_Backup.html" />
     <Content Include="templates_qed\hwbi\riv.html" />

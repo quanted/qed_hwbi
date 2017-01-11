@@ -1,11 +1,14 @@
 from django.template.loader import render_to_string
 from django.http import HttpResponse, HttpResponseRedirect
 import importlib
-import links_left
 import os
 import secret
 from django.conf import settings
 from django.shortcuts import redirect
+#hwbi_app modules
+from hwbi_app import views
+from hwbi_app import links_left
+from hwbi_app import hwbi_input
 
 
 def input_page(request, model='none', header='none'):
@@ -16,9 +19,10 @@ def input_page(request, model='none', header='none'):
     #         if not request.user.is_authenticated():
     #             return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
 
-    viewmodule = importlib.import_module('.views', 'models.'+model)
-    inputmodule = importlib.import_module('.'+model+'_input', 'models.'+model)
-    header = viewmodule.header
+    #viewmodule = importlib.import_module('.views', 'models.'+model)
+    #inputmodule = importlib.import_module('.'+model+'_input', 'models.'+model)
+    #header = viewmodule.header
+    header = views.header
 
     # import logging
 
@@ -71,10 +75,11 @@ def input_page(request, model='none', header='none'):
     html += render_to_string('02uberintroblock_wmodellinks_drupal.html', {
         'CONTACT_URL': os.environ['CONTACT_URL'],
         'MODEL': model,
-        'PAGE': 'input'})
-
-    input_page_func = getattr(inputmodule, model + '_input_page')  # function name example: 'sip_input_page'
-    html += input_page_func(request, model, header)
+        'PAGE': 'input'})    
+    
+    #input_page_func = getattr(inputmodule, model + '_input_page')  # function name example: 'sip_input_page'
+    #html += input_page_func(request, model, header)
+    html += hwbi_input.hwbi_input_page(request,model, header)
 
     html += links_left.ordered_list(model, 'run_model')
     html += render_to_string('06uberfooter.html', {})

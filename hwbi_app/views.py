@@ -19,7 +19,7 @@ header = 'HWBI'
 
 
 def hwbi_view(request):
-    html = render_to_string('hwbi/index.html', {})
+    html = render_to_string('index.html', {})
     response = HttpResponse()
     response.write(html)
 

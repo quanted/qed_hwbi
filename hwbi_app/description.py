@@ -1,9 +1,9 @@
 from django.template.loader import render_to_string
 from django.http import HttpResponse
 import importlib
-import links_left
 import os
-import hwbi_app.views
+from hwbi_app import links_left
+from hwbi_app import views
 
 
 def description_page(request, model='none', header='none'):
@@ -12,15 +12,17 @@ def description_page(request, model='none', header='none'):
     print(current_dir)
     #viewmodule = importlib.import_module('views')
     #header = viewmodule.header
-    header = 'HWBI'    
+    header = views.header    
+    
 
     #proj_path = os.environ['PROJECT_PATH']
     #template_path = os.environ['TEMPLATE_PATH']
     #text_file2 = open(os.path.join(os.environ['PROJECT_PATH'], 'models/' + model + '/' + model + '_text.txt'), 'r')
     #text_file2 = open(os.path.join(template_path  + "/" + model + '/' + model + '_text.html'), 'r')
-    #text_file2 = open(os.path.join(template_path  + "/" + model + '/' + model + '_text.html'), 'r')
-    xx = render_to_string(model + '_text.html')
     #xx = text_file2.read()
+
+    xx = render_to_string(model + '_text.html')
+
     html = render_to_string('01uberheader_main_drupal.html', {
         'SITE_SKIN': os.environ['SITE_SKIN'],
         'TITLE': header + ' Description'})

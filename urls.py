@@ -6,8 +6,7 @@ from datetime import datetime
 from django.conf.urls import url
 import django.contrib.auth.views
 
-#import app.forms
-#import app.views
+
 from hwbi_app import views
 from hwbi_app import algorithms
 from hwbi_app import description
@@ -15,24 +14,17 @@ from hwbi_app import input
 from hwbi_app import links_left
 from hwbi_app import map
 from hwbi_app import references
-from hwbi_app import views
 
-
-
-# Uncomment the next lines to enable the admin:
-# from django.conf.urls import include
-# from django.contrib import admin
-# admin.autodiscover()
 
 urlpatterns = [
     # Examples:
     #url(r'^hwbi', views.hwbi_view),    
     url(r'^$', description.description_page, {'model': "hwbi"}),
     url(r'^description$', description.description_page, {'model': "hwbi"}),
-    #url(r'^input$', input.input_page, {'model': "hwbi"}),
-    #url(r'^map$', map.map_page, {'model': "hwbi"}),
-    #url(r'^algorithms$', algorithms.algorithm_page, {'model': "hwbi"}),
-    #url(r'^references$', references.references_page, {'model': "hwbi"}),
+    url(r'^input$', input.input_page, {'model': "hwbi"}),
+    url(r'^map$', map.map_page, {'model': "hwbi"}),
+    url(r'^algorithms$', algorithms.algorithm_page, {'model': "hwbi"}),
+    url(r'^references$', references.references_page, {'model': "hwbi"}),
     #url(r'^$', app.views.home, name='home'),
     #url(r'^contact$', app.views.contact, name='contact'),
     #url(r'^about', app.views.about, name='about'),
