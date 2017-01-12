@@ -18,4 +18,4 @@ def hwbi_input_page(request, model='hwbi', header='none'):
     return html
 
 def hwbi_input_page_html(request, model, dummy):
-    return render_to_string('hwbi/hwbi_input_page.html', {})
+    return render_to_string('hwbi_input_page.html', {})

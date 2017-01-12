@@ -19,12 +19,12 @@ from hwbi_app import references
 urlpatterns = [
     # Examples:
     #url(r'^hwbi', views.hwbi_view),    
-    url(r'^$', description.description_page, {'model': "hwbi"}),
-    url(r'^description$', description.description_page, {'model': "hwbi"}),
-    url(r'^input$', input.input_page, {'model': "hwbi"}),
-    url(r'^map$', map.map_page, {'model': "hwbi"}),
-    url(r'^algorithms$', algorithms.algorithm_page, {'model': "hwbi"}),
-    url(r'^references$', references.references_page, {'model': "hwbi"}),
+    #url(r'^$', description.description_page, {'model': "hwbi"}),
+    url(r'^hwbi$', description.description_page, {'model': "hwbi"}),
+    url(r'^hwbi/input$', input.input_page, {'model': "hwbi"}),
+    url(r'^hwbi/map$', map.map_page, {'model': "hwbi"}),
+    url(r'^hwbi/algorithms$', algorithms.algorithm_page, {'model': "hwbi"}),
+    url(r'^hwbi/references$', references.references_page, {'model': "hwbi"}),
     #url(r'^$', app.views.home, name='home'),
     #url(r'^contact$', app.views.contact, name='contact'),
     #url(r'^about', app.views.about, name='about'),

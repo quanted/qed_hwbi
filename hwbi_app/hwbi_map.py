@@ -47,4 +47,4 @@ def hwbi_map_page(request, model='hwbi', header='none'):
 
 
 def hwbi_map_page_html(request, model, dummy):
-    return render_to_string('hwbi/hwbi_map_page.html', {})
+    return render_to_string('hwbi_map_page.html', {})

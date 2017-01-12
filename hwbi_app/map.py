@@ -6,6 +6,9 @@ import os
 import secret
 from django.conf import settings
 from django.shortcuts import redirect
+from hwbi_app import views
+from hwbi_app import hwbi_map
+
 
 
 def map_page(request, model='none', header='none'):
@@ -16,9 +19,10 @@ def map_page(request, model='none', header='none'):
     #         if not request.user.is_authenticated():
     #             return redirect('%s?next=%s' % (settings.LOGIN_URL, request.path))
 
-    viewmodule = importlib.import_module('.views', 'models.'+model)
-    inputmodule = importlib.import_module('.'+model+'_map', 'models.'+model)
-    header = viewmodule.header
+    #viewmodule = importlib.import_module('.views', 'models.'+model)
+
+    #inputmodule = importlib.import_module('.'+model+'_map', 'models.'+model)
+    header = views.header
 
     # import logging
 
@@ -73,8 +77,9 @@ def map_page(request, model='none', header='none'):
         'MODEL': model,
         'PAGE': 'input'})
 
-    map_page_func = getattr(inputmodule, model + '_map_page')  # function name example: 'sip_input_page'
-    html += map_page_func(request, model, header)
+    #map_page_func = getattr(inputmodule, model + '_map_page')  # function name example: 'sip_input_page'
+    #html += map_page_func(request, model, header)
+    html += hwbi_map.hwbi_map_page(request, model, header)
 
     html += links_left.ordered_list(model, 'map_model')
     html += render_to_string('06uberfooter.html', {})
