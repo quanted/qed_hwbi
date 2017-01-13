@@ -6,3 +6,6 @@
 	path = static_qed
 	url = https://github.com/quanted/static_qed.git
 	branch = master
+[submodule "hwbi_app"]
+	path = hwbi_app
+	url = https://github.com/quanted/hwbi_app.git
