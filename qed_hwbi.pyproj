@@ -42,6 +42,7 @@
     <Compile Include="hwbi_app\models.py" />
     <Compile Include="hwbi_app\references.py" />
     <Compile Include="hwbi_app\tests.py" />
+    <Compile Include="hwbi_app\urls.py" />
     <Compile Include="hwbi_app\views.py" />
     <Compile Include="hwbi_app\__init__.py" />
     <Compile Include="manage.py" />
