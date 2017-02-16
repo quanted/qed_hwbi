@@ -41,6 +41,7 @@
     <Compile Include="hwbi_app\migrations\__init__.py" />
     <Compile Include="hwbi_app\models.py" />
     <Compile Include="hwbi_app\references.py" />
+    <Compile Include="hwbi_app\singlepage.py" />
     <Compile Include="hwbi_app\tests.py" />
     <Compile Include="hwbi_app\urls.py" />
     <Compile Include="hwbi_app\views.py" />
@@ -3488,6 +3489,7 @@
     <Content Include="templates_qed\hwbi\hwbi_input_page.html" />
     <Content Include="templates_qed\hwbi\hwbi_map_page.html" />
     <Content Include="templates_qed\hwbi\hwbi_references.html" />
+    <Content Include="templates_qed\hwbi\hwbi_singlePage.html" />
     <Content Include="templates_qed\hwbi\hwbi_text.html" />
     <Content Include="templates_qed\hwbi\index.html" />
     <Content Include="templates_qed\hwbi\index_tab_Backup.html" />
