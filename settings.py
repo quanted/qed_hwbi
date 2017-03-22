@@ -23,7 +23,7 @@ TEMPLATE_ROOT = os.path.join(PROJECT_ROOT, 'templates_qed/') #.replace('\\','/')
 
 # CTS- Boolean for if it's on Nick's local machine or not..
 NICK_LOCAL = False
-
+HWBI_DB_PATH = os.path.join(PROJECT_ROOT, '/hwbi_app/hwbi_rest/hwbi_app/models/hwbi.db')
 # Define ENVIRONMENTAL VARIABLES
 os.environ.update({
     'REST_SERVER_8': 'http://134.67.114.8',  # 'http://localhost:64399'
@@ -36,7 +36,8 @@ os.environ.update({
     'CTS_JCHEM_SERVER': 'http://134.67.114.2',
     'CTS_EFS_SERVER': 'http://134.67.114.2',
     'CTS_SPARC_SERVER': 'http://204.46.160.69:8080',
-    'CTS_VERSION': '1.5.0'
+    'CTS_VERSION': '1.5.0',
+    'HWBI_DB_PATH' : HWBI_DB_PATH
 
 })
 
@@ -132,11 +133,11 @@ WSGI_APPLICATION = 'wsgi_local.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-
+HWBI_DB_PATH = os.path.join(PROJECT_ROOT, '/hwbi_app/hwbi_rest/hwbi_app/models/hwbi.db')
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_ROOT, 'db.sqlite3'),
+    'default' : {
+        'ENGINE' : 'django.db.backends.sqlite3',
+        'NAME' : os.path.join(PROJECT_ROOT,'hwbi_app/models/hwbi_app.sqlite3')
     }
 }
 
