@@ -134,12 +134,20 @@ WSGI_APPLICATION = 'wsgi_local.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 HWBI_DB_PATH = os.path.join(PROJECT_ROOT, '/hwbi_app/hwbi_rest/hwbi_app/models/hwbi.db')
+
 DATABASES = {
-    'default' : {
-        'ENGINE' : 'django.db.backends.sqlite3',
-        'NAME' : os.path.join(PROJECT_ROOT,'hwbi_app/models/hwbi_app.sqlite3')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(PROJECT_ROOT, 'db.sqlite3'),
+    },
+    'hwbi_db': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(PROJECT_ROOT, 'hwbi_app/hwbi_db.sqlite3'),
     }
 }
+
+DATABASE_ROUTERS = {
+    'routers.HwbiRouter'}
 
 # Authentication
 AUTH = False
