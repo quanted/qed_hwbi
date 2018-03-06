@@ -50,7 +50,7 @@ try:
     with open('secret_key_django_dropbox.txt') as f:
         SECRET_KEY = f.read().strip()
 except IOError as e:
-    print "Could not find secret file"
+    print("Could not find secret file")
     SECRET_KEY = 'Shhhhhhhhhhhhhhh'
     pass
 
@@ -142,7 +142,7 @@ DATABASES = {
     },
     'hwbi_db': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_ROOT, 'hwbi_app/hwbi_db.sqlite3'),
+        'NAME': os.path.join(PROJECT_ROOT, 'hwbi_app/hwbi_db_v2.sqlite3'),
     }
 }
 
